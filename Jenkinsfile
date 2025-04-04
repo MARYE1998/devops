@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clean Workspace') {
             steps {
-                cleanWs() // Nécessite le plugin "Workspace Cleanup Plugin"
+                cleanWs() // Supprime tous les fichiers présents dans le répertoire de travail Jenkins avant de commencer un nouveau build, pour éviter les conflits ou erreurs dues à d’anciens fichiers.
             }
         }
 
@@ -20,4 +20,5 @@ pipeline {
             }
         }
     }
-}
+    
+
